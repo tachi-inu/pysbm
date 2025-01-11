@@ -52,3 +52,9 @@ htmlcov/
 
 # ノートブック関連
 Example.ipynb
+
+# ファイル関連
+credentials.json
+
+# データ関連
+Network Data/

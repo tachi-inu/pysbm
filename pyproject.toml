@@ -1,0 +1,38 @@
+[project]
+name = "pysbm"
+version = "0.1.0"
+description = "Stochastic Block Model implementation in Python"
+requires-python = ">=3.8"
+dependencies = [
+    "google-api-python-client>=2.158.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.1",
+    "networkx>=2.0",
+    "numpy>=1.15",
+    "pandas>=2.0.3",
+    "scikit-learn>=0.20",
+    "six>=1.10",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+    "matplotlib>=3.7.5",
+    "tqdm>=4.67.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "pysbm/**/*.py",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["pysbm/UnitTests"]
+python_files = ["test_*.py"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+] 

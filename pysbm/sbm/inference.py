@@ -601,9 +601,9 @@ class MetropolisHastingInference(Inference):
         Try a Metropolis-Hasting move
         """
         if self.partition.is_graph_directed():
-            self.infer_stepwise_undirected()
-        else:
             self.infer_stepwise_directed()
+        else:
+            self.infer_stepwise_undirected()
 
     def update_temperature(self):
         pass
